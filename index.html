@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Last Light</title>
+
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#812125" />
+
+		<link rel="stylesheet" href="stylesheets/main.css" />
+		<link rel="stylesheet" href="stylesheets/loading.css" />
+		<link rel="stylesheet" href="stylesheets/charts.min.css" />
+
+		<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
+	</head>
+	<body>
+		<video autoplay muted loop id="bgvideo">
+			<source src="video/background_loop.mp4" type="video/mp4" />
+		</video>
+
+		<div id="intrologoload"></div>
+
+		<!-- <img src="img/logo.svg" width="1000" /> -->
+
+		<div id="loadzone">
+			<main>
+				<div class="basic">
+					<h1>What's It About?</h1>
+
+					<div class="info">
+						<!-- PREMISE -->
+						<h2>Premise</h2>
+
+						<p>
+							In <span class="whoa-neo">Last Light,</span> you'll face 7 waves of zombies, each growing more
+							difficult to defeat than the last. The increase in difficulty forces the player to adapt against
+							decreasing odds, keeping the stakes high and gameplay dynamic. Players will work as a team, gather
+							props to build barricades and hold back zombies long enough to escape.
+						</p>
+						<p>
+							Once they've survived to the end of the 7<sup>th</sup>
+							wave, you and the rest of the survivors on your team will make a run for one of several
+							random exits placed throughout one of the game's several levels, fighting off any zombies
+							scattered about scrounging about looking for the brains of any survivors who happen to pass
+							by.
+						</p>
+						<p>
+							It's a frantic dash to finish off the match that keeps players on edge and a great way to close out
+							the game.
+						</p>
+
+						<!-- MECHANICS -->
+						<h2>Mechanics</h2>
+
+						<p>
+							So, you might be wondering: "How do I stay alive for 7 waves when I'm essentially
+							trapped in a box with zombies trying to kill me the entire time?"
+						</p>
+						<p>
+							You can't. This is where the game's core mechanics come into play, ensuring you have the proper tools
+							to survive.
+						</p>
+						<p>
+							While you may not be able to hold them off <i>forever,</i> you can <i>avoid</i> the problem temporarily by building a barricade.
+							Barricades buy you time, putting life-saving distance between yourselves and the zombies.
+						</p>
+						<img src="img/screenshots/barricading_1.webp" width="700" />
+						<p>
+							Affixing a prop to the world with hammer and nail provides it with a healthbar, allowing zombies
+							to destroy it by attacking it. Props incorporated into barricades that have been damaged by zombies
+							can be repaired by hitting them with a hammer. This is usually done by the player who built the
+							barricade; building and maintaining barricades is a complex task, so it is best for at least one
+							player to dedicate themselves to this cause. The rest of the players use ranged and melee weapons to
+							fend off the zombies through gaps in assembled barricades, thinning their numbers enough for the barricade
+							to hold long enough to reach the end of the 7<sup>th</sup> wave.
+						</p>
+						<p>
+							Teamwork is essential&mdash;each player has a role, and effective coordination is critical to ensure that you aren't overwhelmed.
+						</p>
+						<!-- <div class="slides">
+							<div><img src="img/screenshots/barricading_2.webp" /></div>
+							<div><img src="img/screenshots/barricading_3.webp" /></div>
+							<div><img src="img/screenshots/barricading_4.webp" /></div>
+							<div><img src="img/screenshots/barricading_5.webp" /></div>
+							<div><img src="img/screenshots/barricading_6.webp" /></div>
+							<div><img src="img/screenshots/barricading_7.webp" /></div>
+						</div> -->
+						<section id="props-carousel" class="splide" aria-label="Images of Props for Barricading">
+							<div class="splide__track">
+								<ul class="splide__list">
+									<li class="splide__slide">
+										<img src="img/screenshots/barricading_2.webp" />
+									</li>
+									<li class="splide__slide">
+										<img src="img/screenshots/barricading_3.webp" />
+									</li>
+									<li class="splide__slide">
+										<img src="img/screenshots/barricading_4.webp" />
+									</li>
+									<li class="splide__slide">
+										<img src="img/screenshots/barricading_5.webp" />
+									</li>
+									<li class="splide__slide">
+										<img src="img/screenshots/barricading_6.webp" />
+									</li>
+									<li class="splide__slide">
+										<img src="img/screenshots/barricading_7.webp" />
+									</li>
+								</ul>
+							</div>
+						</section>
+						<script>
+							new Splide("#props-carousel").mount();
+						</script>
+						<p>
+							Levels in the game are filled with physics-enabled props players can pick up, position, reorient
+							and fasten to the world to build barricades with. The diversity of these props allows for much
+							creativity; different materials have different properties and strengths, and clever players will
+							experiment to find the most effective setups. Reinforcing barricades, setting traps and funneling
+							enemies through chokepoints are just some of the strategies that players could use to their advantage.
+						</p>
+
+						<!-- AESTHETIC -->
+						<h2>Aesthetic</h2>
+
+						<p>
+							Stylistically, I would prefer the game to take place in the universe of Valve Software's <span class="whoa-neo">Half-Life 2.</span>
+							As mentioned above, Valve have historically been very lenient with the licensing of their Source engine and
+							the use of their assets by other studios for the development of third-party games in that engine, so I'm
+							not too concerned about that.
+						</p>
+						<p>
+							If a pivot to Source 2 ends up taking place, we could certainly shift to the style of <span class="whoa-neo">Half-Life: Alyx</span>
+							without compromising our vision of a <span class="whoa-neo">Half-Life</span>-themed game. Source 2's advancements in lighting, shading
+							and environmental interaction would elevate the game's visuals and improve player experience.
+						</p>
+						<p>
+							The scenes pictured were constructed by myself with the assets from Valve titles such as
+							<span class="whoa-neo">Half-Life 2</span> and <span class="whoa-neo">Half-Life 2: Episode One,</span> in addition to some original assets
+							of my own (more about the external assets under the <span class="whoa-neo">How Is It Being Made</span> section). They represent the tone
+							I want to achieve: Dark, moody, filled with danger. Surviving in a world that feels lived-in and believable.
+						</p>
+
+						<!-- VOICE ACTING -->
+						<h2>Voice Acting</h2>
+
+						<p>
+							When it comes to other kinds of assets, voice acting is one area that may be of concern to people interested in the project. Rest assured,
+							there is no shortage of voice lines available to Source engine developers in the goldmine of first-party <span class="whoa-neo">Half-Life</span>
+							assets available to them. Regardless, were this not the case, I and several individuals I know are reasonably experienced with voice acting and
+							currently possess the equipment necessary to produce the studio-quality voice recordings one would expect from a production of this caliber.
+							So, voice acting is an aspect of the game's development I've got on lock.
+						</p>
+
+						<!-- MUSIC -->
+						<h2>Music</h2>
+
+						<p>
+							I plan to have a dynamic music system for the game. In simple terms, what this means is that I look to create a number of looping tracks
+							to be seamlessly layered over one another by a system programmed to measure the "mood" of the game at any moment in time, i.e., when combat
+							is building up, so is the music. I believe tailored music samples and a carefully designed music system would be able to accomplish this to
+							great effect.
+						</p>
+					</div>
+				</div>
+
+				<div class="basic">
+					<h1>How Is It Being Made?</h2>
+
+					<div class="info">
+						<!-- ENGINE -->
+						<h2>Engine Tech</h2>
+
+						<img src="img/screenshots/hammer_1.webp" width="700" />
+						<p>
+							The game is built on Valve's Source engine, which brings with it a number of complications <i>and</i>
+							a number of benefits. Working in Source provides an opportunity to tap into a well-known and versatile
+							game engine, known for its (albeit somewhat dated) physics simulation. However, it does come with
+							challenges that any developer working in this engine will face.
+						</p>
+
+						<!-- ASSETS -->
+						<h2>Asset Acquisition</h2>
+
+						<p>
+							For example, Valve allows textures and materials to be taken directly from first-party Source engine
+							games (ones they've made), so long as they are used in commercial games running on Source (not ported
+							across engines) and do not contain Valve trademarks (such as characters, logos, etc.). This would allow
+							us to forego investing much time, effort and money into creating original assets for certain aspects
+							of worldbuilding when said aspects already exist in Valve's first-party Source games. Leveraging those
+							assets will allow us to create a world that feels familiar, immersive and true to the aesthetic of not
+							only the <span class="whoa-neo">Half-Life</span> franchise I hope to align with, but other games built
+							on Source that I and so many others in the space grew up playing.
+						</p>
+						<p>
+							Pertaining to the issue of trademarks, it would certainly be possible to create a game "taking place"
+							in the <span class="whoa-neo">Half-Life</span> universe (or one that accomplishes the feel of said universe) without using any
+							trademarks. The universe of <span class="whoa-neo">Half-Life</span> isn't one that makes extensive use of trademarks in the
+							first place, so avoiding voice lines that say the name "Gordon Freeman" or "Alyx Vance" is really the
+							extent of the duty we'd be facing with that.
+						</p>
+						<p>
+							Even if we paid absolutely no mind to the issue of trademarks, there have been licensed Source games in
+							the past that have paid no mind to the <span class="whoa-neo">Half-Life</span> intellectual property and Valve haven't paid any
+							mind to it at all. So I foresee no issues, and this gives us a lot of freedom in the way we approach storytelling and
+							worldbuilding, whilst still honoring the spirit of the games from which we draw our aesthetic inspiration.
+						</p>
+						<p>
+							As far as complications go, see the <span class="whoa-neo">Potential Budget</span> section below.
+						</p>
+					</div>
+				</div>
+
+				<div class="basic">
+					<h1>Potential Budget</h1>
+
+					<div class="info">
+						<p>
+							The history of licensed third-party games built on the Source engine is a confusing and unfortunately
+							expensive one. 
+						</p>
+						<p>
+							The licensing cost for third-party Source games was formerly $25,000 per title, and only
+							applied to commercial games and/or mods. This is due to the Source engine's reliance upon the independently
+							licensed Havok physics engine, which by itself was originally licensed for an estimated $50,000&ndash;$60,000
+							per title (and negotiated by Valve to a lesser price for Source titles as it was mandatory middleware for the
+							engine's operation).
+						</p>
+						<p>
+							Fortunately, in 2021, the Havok licensing fee for use with Valve engines was waived in an agreement between Valve
+							and Microsoft (the parent company of Havok). The license is now free.
+						</p>
+						<p>
+							There is unfortunately very little public licensing information available, as much information pertinent to the
+							subject of budgeting can be acquired only under NDA. Most information that was leaked regarding the subject was
+							leaked before the Havok licensing fee had been waived, so it's difficult to give reliable figures.
+						</p>
+						<p>
+							For a more realistic budget, assuming that our developers are working part-time jobs to support themselves, I can
+							significantly reduce the estimates of our living expenses. Instead, I'm going to allocate a smaller stipend for
+							core project work:
+							<ul>
+								<li><b>Developer Stipends (3 developers, 18 months, part-time):</b><br /><span class="whoa-neo">$500</span> per month, per developer, totaling <span class="whoa-neo">$27,000</span></li><br />
+								<li><b>Engine Tech & Misc. Expenses:</b><br />Estimated at <span class="whoa-neo">$12,000</span></li><br />
+								<li><b>Marketing & Promotion:</b><br />Estimated at <span class="whoa-neo">$3,000</span> for online campaigns, social media ads and promotional events to generate pre-launch interest.</li>
+							</ul>
+						</p>
+						<p>
+							<span class="whoa-neo">Total: $42,000</span>
+						</p>
+						<div class="chart">
+							<table class="charts-css pie show-heading">
+								<!-- <caption>Budget Distribution</caption> -->
+								<thead>
+									<tr>
+										<th scope="col"> Dev. Stipends </th>
+										<th scope="col"> E. Tech & Misc. </th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="--start: .3571428571428571; --end: .9285714285714286;"> <span class="data"> $27,000 </span> </td>
+									</tr>
+									<tr>
+										<td style="--start: 0; --end: .3571428571428571;"> <span class="data"> $12,000 </span> </td>
+									</tr>
+									<tr>
+										<td style="--start: .9285714285714286; --end: 1;"> <span class="data"> $3,000 </span> </td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<p>
+							We could also be looking at Valve licensing Source 2 sometime in the next 5 years, which could substantially change
+							the course of development; the radical shift in available engine technology and availability of assets from <span class="whoa-neo">Half-Life: Alyx</span>
+							are certainly enticing prospects for us.
+						</p>
+					</div>
+				</div>
+
+				<div class="basic">
+					<h1>Project Timeline</h1>
+
+					<div class="info">
+						<p>
+							Our plan is to get <span class="whoa-neo">Last Light</span> out within 18 months:
+							<ol>
+								<li>
+									<b>Pre-Production (3 months):</b><br />Concept development, planning and asset gathering, as well as setting up collaboration software.
+									This phase includes brainstorming and experimenting with different ideas until we find the best ones to move forward with.
+								</li><br />
+								<li>
+									<b>Core Development (9 months):</b><br />Building game mechanics, level design, asset integration (engine tools) and implementation of core features.
+									I'll focus on "bringing it to life" during this phase, putting the levels together, fleshing out the core systems (such as barricading), combat mechanics
+									and finally ensuring the result is fun for players.
+								</li><br />
+								<li>
+									<b>Testing and Iteration (3 months):</b><br />Alpha testing, internal playtesting, fixing bugs and refining gameplay based on feedback.
+									I plan to invite select playtesters to give us feedback, allowing us to get fresh perspectives and new outlooks on the game to make
+									proper adjustments.
+								</li><br />
+								<li>
+									<b>Polish and Finalization (3 months):</b><br />Final bug fixes, optimization, polish, marketing preparations and preparing for release.
+									During this phase, I want to make sure everything's running smoothly, optimize performance across the board, and apply finishing touches to
+									make sure the game mechanics and visuals look and feel just right. I'll also ramp up our marketing and community engagement.
+								</li>
+							</ol>
+						</p>
+						<p>
+							The timeline above is a very rough estimate and should be expected to change with unforeseen challenges or changes in scope,
+							but it should give a somewhat realistic idea of how long each development phase should take.
+						</p>
+						<p>
+							It <i>does</i> include room for adjustment based on feedback from playtesting, or any additional features that may be proposed during
+							development. Delivering a high-quality experience for players is our highest priority. If that comes at the expense of our pre-existing timeline, so be it.
+						</p>
+						<p>
+							But it's very unlikely it would. I'm confident with these estimates.
+						</p>
+					</div>
+				</div>
+
+				<div class="basic">
+					<!-- MEET THE DEVS -->
+					<h1>Meet the Developers</h1>
+
+					<div id="profilecontainer">
+						<div>
+							<div class="pfp">
+								<img src="img/profiles/jck.webp" />
+							</div>
+
+							<h1>John Connor</h1>
+							<h2>Lead Developer, Level Designer</h2>
+
+							<p>
+								I started fooling around with computers at a young age, but I wasn't really any good at it until I was 17 or 18. Though programming
+								was and generally still is my strongest suit, I have quite a lot of experience in level design from hobbyist side projects I've taken on
+								in games built on in both Source and Source 2.
+							</p>
+							<p>
+								Video games are my lifeblood; there's really nothing else I know nearly as much about or can do as much with as game dev. That is to say:
+								This project is one I am passionate about, and truly believe you should be, too.
+							</p>
+						</div>
+
+						<div>
+							<div class="pfp">
+								<img src="img/profiles/empty.webp" />
+							</div>
+
+							<h1>Unknown</h1>
+							<h2>Assistant Developer</h2>
+
+							<p>
+								To deliver on all the promises I've made, I'll need at least one <span class="whoa-neo">Assistant Developer</span> to help me build
+								everything. Though I've only listed one position here, if we have surplus funding after meeting our needs it will go toward hiring
+								additional developers for this purpose.
+							</p>
+						</div>
+
+						<div>
+							<div class="pfp">
+								<img src="img/profiles/empty.webp" />
+							</div>
+
+							<h1>Unknown</h1>
+							<h2>Composer, Sound Designer</h2>
+
+							<p>
+								As detailed in the <span class="whoa-neo">Music</span> subsection, a dynamic music system is planned for the game. In order for this
+								system to be developed, the music <i>itself</i> is going to be needed. To match the complexity of what I have planned, I'll need to
+								work in close proximity to the composer and be in constant contact with them, so I'd prefer to hire an in-house composer as compared to
+								simply outsourcing the work and contracting one.
+							</p>
+							<p>
+								I'd also like to have original SFX engineered for the game if possible, and while I have a little experience in that area it won't be
+								enough for a game on the scale I've envisioned. 
+							</p>
+						</div>
+					</div>
+				</div>
+			</main>
+
+			<footer>
+				<p>
+					&copy; 2025 J. Connor Kushmer
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>

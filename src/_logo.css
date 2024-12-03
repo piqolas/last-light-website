@@ -1,0 +1,59 @@
+g#Text > g > g
+{
+  transform-origin: center;
+  transform-box: fill-box;
+  transform: scale(0);
+
+  animation: scaleIn 1.2s forwards cubic-bezier(0, 1.29, .77, 1.25);
+  animation-delay: calc(50ms * var(--i));
+}
+
+g#Text > g#Last > g#L { --i: 0 }
+g#Text > g#Last > g#A { --i: 1 }
+g#Text > g#Last > g#S { --i: 2 }
+g#Text > g#Last > g#T { --i: 3 }
+
+g#Text > g#Light > g#L-2 { --i: 4 }
+g#Text > g#Light > g#I { --i: 5 }
+g#Text > g#Light > g#G { --i: 6 }
+g#Text > g#Light > g#H { --i: 7 }
+g#Text > g#Light > g#T-2 { --i: 8 }
+
+@keyframes scaleIn
+{
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+g#Bubbles > g {
+  transform-origin: center;
+  transform-box: fill-box;
+  transform: scale(1.25);
+
+  animation: bubbling 2.1s ease-in-out infinite;
+  animation-delay: calc(455ms * var(--i));
+}
+
+g#Bubbles > g:nth-child(1) { --i: 0 }
+g#Bubbles > g:nth-child(2) { --i: 1 }
+g#Bubbles > g:nth-child(3) { --i: 2 }
+g#Bubbles > g:nth-child(4) { --i: 3 }
+
+@keyframes bubbling {
+  0%, 100% {
+    transform: scale(1.25);
+  }
+  25% {
+    transform: scale(1.3333);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  75% {
+    transform: scale(1.3);
+  }
+}

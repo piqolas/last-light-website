@@ -1,0 +1,97 @@
+main
+{
+	padding-top: 0;
+}
+
+#intrologospace
+{
+	display: none;
+}
+
+@media only screen and (min-width: 900px)
+{
+	/*
+	#intrologospace
+	{ display: block; }
+	*/
+
+	#intrologoload
+	{
+		margin: 0;
+
+		width: 897px;
+		height: 640px;
+
+		position: absolute;
+
+		top: calc(50% - 320px);
+		left: calc(50% - 448px);
+
+		opacity: 0;
+
+		background-image: url("../img/logo.svg");
+		background-position: center center;
+		background-size: 100%;
+		background-repeat: no-repeat;
+
+		animation: logoMove ease 0.75s;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes logoMove
+	{
+		0%
+		{
+			opacity: 0;
+		}
+		25%
+		{
+			opacity: 1;
+
+			width: 897px;
+			height: 640px;
+
+			top: calc(50% - 320px);
+			left: calc(50% - 448px);
+		}
+		100%
+		{
+			opacity: 1;
+
+			width: 598px;
+			height: 320px;
+
+			top: 4em;
+			left: calc(50% - 299px);
+		}
+	}
+
+	#loadzone
+	{
+		opacity: 0;
+
+		animation: fadeInAnimation linear 0.25s;
+		animation-delay: 0.8s;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
+	}
+	
+	@keyframes fadeInAnimation
+	{
+		0%
+		{
+			opacity: 0;
+		}
+		100%
+		{
+			opacity: 1;
+		}
+	}
+
+	main > div.basic:first-of-type
+	{
+		/* Add top margin when logo is present */
+		margin-top: 28em; 
+	}	
+}

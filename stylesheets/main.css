@@ -1,0 +1,487 @@
+/*
+	© 2025 J. Connor Kushmer
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,500&family=Staatliches&display=block');
+
+:root
+{
+	--theme-color_1: #812125;
+	--theme-color_1_1: #81212548;
+	--theme-color_2: #384281;
+	--theme-color_3: #170A0A;
+	--theme-color_4: #AAA;
+	--theme-color_5: #F2EDEB;
+}
+
+*::selection
+{ background-color: var(--theme-color_2); }
+
+video#bgvideo
+{
+	margin: auto;
+	position: fixed;
+
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+
+	opacity: .5;
+	filter: blur(.2rem);
+
+	z-index: -100;
+}
+
+nav
+{
+	margin: 0;
+	padding: 8px;
+
+	box-sizing: border-box;
+
+	width: 100%;
+
+	display: grid;
+	grid-auto-columns: 1fr;
+	grid-auto-flow: column;
+	
+	column-gap: 8px;
+	row-gap: 8px;
+
+	background-color: #2B2826;
+}
+
+nav > a
+{
+	display: inline-block;
+
+	width: 100%;
+	height: 100%;
+
+	justify-content: center;
+	align-items: center;
+
+	background-color: var(--theme-color_1);
+	transition: background-color .25s;
+
+	font-family: 'Staatliches', cursive;
+	font-size: 2em;
+
+	text-decoration: none;
+	text-align: center;
+}
+
+nav > a:hover
+{
+	background-color: var(--theme-color_2);
+}
+
+body
+{
+	margin: 0;
+
+	background: var(--theme-color_3);
+}
+
+h1, h2, h3, p, a, ul, li
+{
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	color: var(--theme-color_5);
+	text-shadow: 2px 2px var(--theme-color_3);
+}
+
+.basic h1,
+.basic h2
+{
+	margin: auto auto .55em;
+
+	font-family: 'Staatliches', cursive;
+	font-weight: 300;
+	font-variant: small-caps;
+	font-weight: bold;
+
+	transform: scale(1, 1.1);
+
+	text-align: center;
+}
+
+.basic h1
+{
+	letter-spacing: .175em;
+	font-size: 3.3333em;
+}
+.basic h2
+{
+	letter-spacing: .125em;
+	font-size: 2.25em;
+}
+
+main
+{
+	padding-top: 3em;
+}
+
+main p,
+main li,
+.chart
+{
+	font-family: "Roboto", sans-serif;
+	color: var(--theme-color_5);
+	font-size: 1.5em;
+	text-shadow: 2px 2px var(--theme-color_3);
+}
+
+.whoa-neo
+{
+	font-weight: bold;
+	text-transform: capitalize;
+	font-variant: small-caps;
+	font-style: italic;
+}
+
+#intrologospace
+{
+	margin: 4em auto;
+
+	width: 256px;
+	height: 256px;
+}
+
+#intrologolinkfill
+{
+	margin: 0;
+
+	width: 100%;
+	height: 100%;
+}
+
+#profilecontainer
+{
+	margin: auto;
+
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+	height: 100%;
+}
+
+#profilecontainer > div
+{
+	margin: 1em;
+	padding: 1.5em 1.25em;
+
+	/* width: 100%; */
+
+	flex: 50%;
+
+	background-color: var(--theme-color_1_1);
+
+	border: 3px var(--theme-color_5) outset;
+	filter: drop-shadow(0 0 4px black);
+
+	border-radius: 2em;
+
+	transition: filter .35s;
+}
+
+#profilecontainer > div:hover
+{
+	filter: drop-shadow(0 0 12px black);
+}
+
+/* #profilecontainer > div:not(:first-child)
+{
+	margin-left: 2em;
+} */
+
+.pfp
+{
+	margin: 0 auto;
+
+	width: 184px;
+	height: 184px;
+
+	position: relative;
+
+	overflow: hidden;
+	border-radius: 50%;
+}
+
+.pfp > img
+{
+	display: inline;
+	margin: 0 auto;
+	
+	width: 184px;
+	height: auto;
+}
+
+#profilecontainer > div > p
+{
+	margin: auto auto .8em;
+
+	font-size: 1.25em;
+}
+
+#profilecontainer > div > h1
+{
+	margin: .35em 0 0;
+
+	font-family: 'Staatliches', cursive;
+	font-size: 2.5em;
+	font-weight: 300;
+	letter-spacing: .175em;
+
+	transform: scale(1, 1.1);
+
+	text-align: center;
+}
+
+#profilecontainer > div > h2
+{
+	margin-top: auto;
+	margin-bottom: .8em;
+
+	font-family: 'Staatliches', cursive;
+	font-size: 1.5em;
+	font-weight: 400;
+	letter-spacing: .175em;
+
+	text-align: center;
+
+	color: var(--theme-color_4);
+}
+
+/* .socialcontainer
+{
+	margin: auto;
+
+	width: fit-content;
+	height: fit-content;
+}
+
+.fa
+{
+	margin: 1em 2px 0em;
+	padding: 20px;
+
+	display: block;
+
+	width: 16px;
+
+	background-color: #303030;
+
+	font-size: 1em;
+
+	text-align: center;
+	text-decoration: none;
+
+	border-radius: 50%;
+
+	transition: opacity 0.25s;
+}
+
+.fa:hover
+{
+	opacity: 0.7;
+} */
+
+footer > p
+{
+	margin-top: 3.5em;
+
+	font-size: 1em;
+	font-weight: 300;
+
+	text-align: center;
+}
+
+.basic,
+.pie
+{
+	margin: 0 auto;
+
+	padding: 2em;
+
+	width: 75%;
+	max-width: 1024px;
+
+	background-color: var(--theme-color_1_1);
+	/* backdrop-filter: blur(10rem); */
+
+	border-radius: 2em;
+
+	filter: drop-shadow(0 0 8px black);
+}
+
+.basic:not(:last-child)
+{
+	margin-bottom: 3em;
+}
+
+.basic > p
+{
+	margin: 0 auto;
+}
+
+#submain > p
+{
+	margin: 0 auto 1em;
+}
+
+.basic p > a
+{
+	/* color: #ff9175; */
+
+	text-decoration: none;
+}
+
+.basic p > a:hover
+{
+	text-decoration: underline;
+}
+
+.basic p > a::selection
+{
+	background-color: #bfd6ff;
+}
+
+.basic > .info
+{
+	margin: 1em auto;
+	padding: 1.5em 1.25em;
+
+	border: 2px var(--theme-color_5) solid;
+
+	border-radius: 2em;
+}
+
+.basic > .info:last-child
+{
+	margin-bottom: 0;
+}
+
+.info > img
+{
+	display: block;
+	width: 100%;
+
+	border-radius: 2em;
+}
+
+/* .slides
+{
+	display: flex;
+
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+
+	border-radius: 2em;
+}
+
+.slides > div
+{
+	display: flex;
+	flex-shrink: 0;
+
+	width: 100%;
+	height: 100%;
+
+	scroll-snap-align: start;
+	scroll-behavior: smooth;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.slides > div > img
+{
+	width: 100%;
+} */
+
+.splide__track img
+{
+	width: 100%;
+	height: auto;
+}
+
+.splide__track
+{
+	border-radius: 2em;
+}
+
+.info > img,
+.splide
+{ filter: drop-shadow(0 0 4px black); }
+
+@media only screen and (max-width: 900px)
+{
+	main
+	{
+		padding-top: 0;
+	}
+
+	nav
+	{
+		grid-auto-rows: 1fr;
+		grid-auto-flow: row;
+	}
+
+	/*
+	#profilecontainer
+	{
+		margin: 0 auto;
+
+		flex-direction: row;
+	}
+
+	#profilecontainer > div
+	{
+		width: fit-content;
+	}
+
+	#profilecontainer > div:last-child
+	{
+		margin: 1em auto 0;
+	}
+	*/
+
+	.basic
+	{
+		margin: 0;
+		padding: 2em 1.25em;
+
+		width: auto;
+
+		/* background-color: var(--theme-color_1_1); */
+		border-radius: 0;
+
+		filter: none;
+
+		& > h1
+		{ margin: auto; }
+		& > .info
+		{
+			margin-top: 0;
+
+			padding-top: 0;
+			padding-bottom: 0;
+
+			border: none;
+		}
+	}
+}
+
+.chart
+{
+	margin: 0 auto;
+
+	width: 100%;
+	max-width: 300px;
+}
