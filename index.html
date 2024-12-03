@@ -44,7 +44,7 @@
 							Once they've survived to the end of the 7<sup>th</sup>
 							wave, you and the rest of the survivors on your team will make a run for one of several
 							random exits placed throughout one of the game's several levels, fighting off any zombies
-							scattered about scrounging about looking for the brains of any survivors who happen to pass
+							scattered around and scrounging about looking for the brains of any survivors who happen to pass
 							by.
 						</p>
 						<p>
@@ -60,12 +60,13 @@
 							trapped in a box with zombies trying to kill me the entire time?"
 						</p>
 						<p>
-							You can't. This is where the game's core mechanics come into play, ensuring you have the proper tools
-							to survive.
+							You can't; this is where the game's most important mechanics come into play.
 						</p>
 						<p>
 							While you may not be able to hold them off <i>forever,</i> you can <i>avoid</i> the problem temporarily by building a barricade.
-							Barricades buy you time, putting life-saving distance between yourselves and the zombies.
+							Barricades buy you time, putting life-saving distance between yourselves and the zombies. The game's barricading mechanics are
+							crucial to survival, and learning how to maneuver around them will be the difference between surviving to the 7<sup>th</sup> wave or
+							getting whacked because you were standing too close to an opening.
 						</p>
 						<img src="img/screenshots/barricading_1.webp" width="700" />
 						<p>
@@ -73,12 +74,17 @@
 							to destroy it by attacking it. Props incorporated into barricades that have been damaged by zombies
 							can be repaired by hitting them with a hammer. This is usually done by the player who built the
 							barricade; building and maintaining barricades is a complex task, so it is best for at least one
-							player to dedicate themselves to this cause. The rest of the players use ranged and melee weapons to
-							fend off the zombies through gaps in assembled barricades, thinning their numbers enough for the barricade
-							to hold long enough to reach the end of the 7<sup>th</sup> wave.
+							player to dedicate themselves to this cause. The rest of the players use both ranged and melee weapons to
+							fend off the zombies through gaps in the assembled barricades, thinning their numbers long enough for the barricade
+							to withstand their attacks until the end of the 7<sup>th</sup> wave.
 						</p>
 						<p>
-							Teamwork is essential&mdash;each player has a role, and effective coordination is critical to ensure that you aren't overwhelmed.
+							Humans can "phase" through barricades as though they weren't even there, allowing them to transport themselves from one side to the other.
+							However, their movement speed is reduced considerably during this process, leaving them vulnerable to any zombies attacking the barricade
+							as pass through it.
+						</p>
+						<p>
+							Teamwork is essential; each player has a role, and effective coordination is critical to ensure the team and everyone on it isn't overwhelmed.
 						</p>
 						<!-- <div class="slides">
 							<div><img src="img/screenshots/barricading_2.webp" /></div>
@@ -116,7 +122,7 @@
 							new Splide("#props-carousel").mount();
 						</script>
 						<p>
-							Levels in the game are filled with physics-enabled props players can pick up, position, reorient
+							Levels in the game are filled with physics-enabled props players can pick up, reposition, reorient
 							and fasten to the world to build barricades with. The diversity of these props allows for much
 							creativity; different materials have different properties and strengths, and clever players will
 							experiment to find the most effective setups. Reinforcing barricades, setting traps and funneling
@@ -127,13 +133,12 @@
 						<h2>Aesthetic</h2>
 
 						<p>
-							Stylistically, I would prefer the game to take place in the universe of Valve Software's <span class="whoa-neo">Half-Life 2.</span>
+							Stylistically, I would prefer that the game takes place in the universe of Valve Software's <span class="whoa-neo">Half-Life 2.</span>
 							As mentioned above, Valve have historically been very lenient with the licensing of their Source engine and
-							the use of their assets by other studios for the development of third-party games in that engine, so I'm
-							not too concerned about that.
+							the use of their assets by other studios for the development of third-party games in Source, so I'm not too concerned about that.
 						</p>
 						<p>
-							If a pivot to Source 2 ends up taking place, we could certainly shift to the style of <span class="whoa-neo">Half-Life: Alyx</span>
+							If we end up pivoting to Source 2, we could certainly shift to the style of <span class="whoa-neo">Half-Life: Alyx</span>
 							without compromising our vision of a <span class="whoa-neo">Half-Life</span>-themed game. Source 2's advancements in lighting, shading
 							and environmental interaction would elevate the game's visuals and improve player experience.
 						</p>
@@ -150,8 +155,10 @@
 						<p>
 							When it comes to other kinds of assets, voice acting is one area that may be of concern to people interested in the project. Rest assured,
 							there is no shortage of voice lines available to Source engine developers in the goldmine of first-party <span class="whoa-neo">Half-Life</span>
-							assets available to them. Regardless, were this not the case, I and several individuals I know are reasonably experienced with voice acting and
+							assets available to them. Regardless, were this not the case, I and several individuals I'm familiar with are reasonably experienced with voice acting and
 							currently possess the equipment necessary to produce the studio-quality voice recordings one would expect from a production of this caliber.
+						</p>
+						<p>
 							So, voice acting is an aspect of the game's development I've got on lock.
 						</p>
 
@@ -159,10 +166,15 @@
 						<h2>Music</h2>
 
 						<p>
-							I plan to have a dynamic music system for the game. In simple terms, what this means is that I look to create a number of looping tracks
-							to be seamlessly layered over one another by a system programmed to measure the "mood" of the game at any moment in time, i.e., when combat
-							is building up, so is the music. I believe tailored music samples and a carefully designed music system would be able to accomplish this to
-							great effect.
+							I plan to have a dynamic music system for the game. What this means in simple terms is that I aim to have created a number of looping tracks
+							to be seamlessly layered over one another by a system programmed to measure the "mood" of the game at any moment in time. For example, when
+							combat is building up, so does the music. I believe tailored music samples and a carefully designed music system to accodomate them would
+							accomplish this to great effect.
+						</p>
+						<p>
+							The music will have moments of quiet tension and high crescendos as players encounter groups of zombies or reach critical points in the game loop.
+							The goal is to use music as a tool to build suspense, heighten emotion and provide an additional layer of sensory feedback to players, letting them
+							know when they're in danger and when they've got a moment to rest.
 						</p>
 					</div>
 				</div>
@@ -176,7 +188,7 @@
 
 						<img src="img/screenshots/hammer_1.webp" width="700" />
 						<p>
-							The game is built on Valve's Source engine, which brings with it a number of complications <i>and</i>
+							The game is built on Valve's Source engine, which brings with it a number of complications <i>as well as</i>
 							a number of benefits. Working in Source provides an opportunity to tap into a well-known and versatile
 							game engine, known for its (albeit somewhat dated) physics simulation. However, it does come with
 							challenges that any developer working in this engine will face.
@@ -190,17 +202,19 @@
 							games (ones they've made), so long as they are used in commercial games running on Source (not ported
 							across engines) and do not contain Valve trademarks (such as characters, logos, etc.). This would allow
 							us to forego investing much time, effort and money into creating original assets for certain aspects
-							of worldbuilding when said aspects already exist in Valve's first-party Source games. Leveraging those
-							assets will allow us to create a world that feels familiar, immersive and true to the aesthetic of not
-							only the <span class="whoa-neo">Half-Life</span> franchise I hope to align with, but other games built
-							on Source that I and so many others in the space grew up playing.
+							of worldbuilding when said aspects already exist in Valve's first-party Source games.
+						</p>
+						<p>
+							Leveraging those assets will allow us to create a world that feels familiar, immersive and true to the aesthetic of not
+							only the <span class="whoa-neo">Half-Life</span> franchise I hope to align with, but other games built on Source that I
+							and so many others in the space grew up playing.
 						</p>
 						<p>
 							Pertaining to the issue of trademarks, it would certainly be possible to create a game "taking place"
-							in the <span class="whoa-neo">Half-Life</span> universe (or one that accomplishes the feel of said universe) without using any
-							trademarks. The universe of <span class="whoa-neo">Half-Life</span> isn't one that makes extensive use of trademarks in the
-							first place, so avoiding voice lines that say the name "Gordon Freeman" or "Alyx Vance" is really the
-							extent of the duty we'd be facing with that.
+							in the <span class="whoa-neo">Half-Life</span> universe without creating a "<span class="whoa-neo">Half-Life</span> game."
+							Avoiding trademarks will not be difficult, as the <span class="whoa-neo">Half-Life</span> universe does not make heavy use of
+							them. We can create a game with with the atmosphere of <span class="whoa-neo">Half-Life</span> without mentioning specific
+							characters like "Gordon Freeman" or "Alyx Vance."
 						</p>
 						<p>
 							Even if we paid absolutely no mind to the issue of trademarks, there have been licensed Source games in
@@ -282,6 +296,7 @@
 				</div>
 
 				<div class="basic">
+					<!-- PROJECT TIMELINE -->
 					<h1>Project Timeline</h1>
 
 					<div class="info">
@@ -316,6 +331,7 @@
 						<p>
 							It <i>does</i> include room for adjustment based on feedback from playtesting, or any additional features that may be proposed during
 							development. Delivering a high-quality experience for players is our highest priority. If that comes at the expense of our pre-existing timeline, so be it.
+							Valve put this philosophy into much better words than I ever could, so I won't twist my tongue trying to do a better job than they did.
 						</p>
 						<p>
 							But it's very unlikely it would. I'm confident with these estimates.
@@ -345,6 +361,11 @@
 								Video games are my lifeblood; there's really nothing else I know nearly as much about or can do as much with as game dev. That is to say:
 								This project is one I am passionate about, and truly believe you should be, too.
 							</p>
+							<p>
+								I've spent a lot of time playing games like these, and I've spent a lot of time around <i>others</i> who have played games like these.
+								I know what kind of issues we should expect developing a game like this, I have ideas for how we should tackle them and I know many good
+								names to reach out to during the playtesting stage of development.
+							</p>
 						</div>
 
 						<div>
@@ -352,7 +373,7 @@
 								<img src="img/profiles/empty.webp" />
 							</div>
 
-							<h1>Unknown</h1>
+							<h1>TBD</h1>
 							<h2>Assistant Developer</h2>
 
 							<p>
@@ -367,24 +388,25 @@
 								<img src="img/profiles/empty.webp" />
 							</div>
 
-							<h1>Unknown</h1>
-							<h2>Composer, Sound Designer</h2>
+							<h1>TBD</h1>
+							<h2>Composer, SFX Artist</h2>
 
 							<p>
 								As detailed in the <span class="whoa-neo">Music</span> subsection, a dynamic music system is planned for the game. In order for this
 								system to be developed, the music <i>itself</i> is going to be needed. To match the complexity of what I have planned, I'll need to
-								work in close proximity to the composer and be in constant contact with them, so I'd prefer to hire an in-house composer as compared to
-								simply outsourcing the work and contracting one.
+								work in close proximity to the composer and be in constant contact with them, so I'd prefer to hire an in-house <span class="whoa-neo">Composer</span>
+								as compared to simply outsourcing the work by contracting one.
 							</p>
 							<p>
-								I'd also like to have original SFX engineered for the game if possible, and while I have a little experience in that area it won't be
-								enough for a game on the scale I've envisioned. 
+								I'd also like to have original SFX engineered for the game if possible, and while I have a little experience in that area it <i>probably</i>
+								won't be enough for a game given the scale I've envisioned and detailed here. 
 							</p>
 						</div>
 					</div>
 				</div>
 			</main>
 
+			<!-- COPYRIGHT -->
 			<footer>
 				<p>
 					&copy; 2025 J. Connor Kushmer

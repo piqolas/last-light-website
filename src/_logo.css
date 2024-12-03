@@ -2,9 +2,9 @@ g#Text > g > g
 {
   transform-origin: center;
   transform-box: fill-box;
-  transform: scale(0);
+  transform: scale(.9);
 
-  animation: scaleIn 1.2s forwards cubic-bezier(0, 1.29, .77, 1.25);
+  animation: scaleIn 3s infinite ease-in-out; /* cubic-bezier(0, 1.29, .77, 1.25) */
   animation-delay: calc(50ms * var(--i));
 }
 
@@ -21,12 +21,24 @@ g#Text > g#Light > g#T-2 { --i: 8 }
 
 @keyframes scaleIn
 {
-  0% {
-    transform: scale(0);
+  0%, 100% {
+    transform: scale(.9);
   }
-  100% {
+  6.6667% {
     transform: scale(1);
   }
+  13.3333% {
+    transform: scale(.9);
+  }
+  20% {
+    transform: scale(1.15);
+  }
+  26.6667% {
+    transform: scale(1.05);
+  }
+  /* 30% {
+    transform: scale(.9);
+  } */
 }
 
 g#Bubbles > g {
@@ -34,7 +46,7 @@ g#Bubbles > g {
   transform-box: fill-box;
   transform: scale(1.25);
 
-  animation: bubbling 2.1s ease-in-out infinite;
+  animation: bubbling 1.6667s ease-in-out infinite;
   animation-delay: calc(455ms * var(--i));
 }
 
